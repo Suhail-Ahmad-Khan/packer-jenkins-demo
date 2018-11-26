@@ -26,7 +26,7 @@
         },
         {
             "type": "ansible-local",
-            "playbook_file": "/home/suhail-ahmad/Terraform/suhail-terraform-basics/suhail-packer-demo/oracle-java8-playbook.yml"
+            "playbook_file": "oracle-java8-playbook.yml"
         }
     ]
 }
