@@ -9,7 +9,7 @@
             "access_key": "{{user `aws_access_key`}}",
             "secret_key": "{{user `aws_secret_key`}}",
             "region": "ap-south-1",
-            "source_ami": "ami-04ea996e7a3e7ad6b",
+            "source_ami": "ami-00a8f2c6918024b25",
             "instance_type": "t2.micro",
             "ssh_username": "ubuntu",
             "ami_name": "suhail-packer-example {{timestamp}}"
