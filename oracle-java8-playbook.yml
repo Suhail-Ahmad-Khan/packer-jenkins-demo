@@ -24,7 +24,7 @@
         update-cache: yes
 
     - name: Copy File from S3 bucket to EC2 instance
-      s3:
+      aws_s3:
         bucket: "bridgelabz-ansible-test-bucket"
         object: "demo.txt"
         dest: "/home/ubuntu/demo.txt"
