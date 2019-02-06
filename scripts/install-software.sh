@@ -7,3 +7,4 @@ sudo apt install python-pip -y
 export LC_ALL=en_US.UTF-8
 sudo pip install awscli --upgrade --user
 sudo pip install --upgrade pip
+sudo pip install boto3 botocore --user
