@@ -24,14 +24,11 @@
         update-cache: yes
 
     - name: Ensure botocore and boto3 modules are installed
+      become: yes
       pip:
         name:         [ "boto3", "botocore"]
         extra_args:   "--user"
 
     - name: Copy File from S3 bucket to EC2 instance
-      aws_s3:
-        bucket: "bridgelabz-ansible-test-bucket"
-        object: "demo.txt"
-        dest: "/home/ubuntu/demo.txt"
-        mode: get
-        overwrite: no
+      become: yes
+      command: "aws s3 sync s3://bridgelabz-ansible-test-bucket/demo.txt /home/ubuntu/"
