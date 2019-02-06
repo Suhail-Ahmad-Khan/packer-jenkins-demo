@@ -22,3 +22,11 @@
         name: [oracle-java8-installer, ca-certificates, oracle-java8-set-default] 
         state: latest 
         update-cache: yes
+
+    - name: Copy File from S3 bucket to EC2 instance
+      s3:
+        bucket: "bridgelabz-ansible-test-bucket"
+        object: "demo.txt"
+        dest: "/home/ubuntu/demo.txt"
+        mode: get
+        overwrite: no
