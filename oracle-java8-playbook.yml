@@ -38,4 +38,3 @@
         bucket: "bridgelabz-ansible-test-bucket"
         object: "demo.txt"
         dest: "/home/ubuntu"
-        
