@@ -29,6 +29,13 @@
         name:         [ "boto3", "botocore"]
         extra_args:   "--user"
 
-    - name: Copy File from S3 bucket to EC2 instance
+    - name: Download files from S3
       become: yes
-      command: "aws s3 sync s3://bridgelabz-ansible-test-bucket/demo.txt /home/ubuntu/"
+      aws_s3:
+        mode: get
+        aws_access_key: "{{user `aws_access_key`}}"
+        aws_secret_key: "{{user `aws_secret_key`}}"
+        bucket: "bridgelabz-ansible-test-bucket"
+        object: "demo.txt"
+        dest: "/home/ubuntu"
+        
